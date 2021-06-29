@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+
 const Sobre = () => {
+   
    return (
       <>
       <StyledDiv>
@@ -21,6 +24,10 @@ const StyledDiv = styled.div`
    width: 990px;
    margin: auto;
    position: relative;
+
+   p {
+      text-align: justify;
+   }
 `
 
 export default Sobre;

@@ -4,19 +4,25 @@ import styled from 'styled-components';
 const Footer = () => {
    return (
      <StyledFooter>
-        Márcio Monks - Copyright 2021
+        
+            <p>Márcio Monks - Copyright 2021</p>
+        
      </StyledFooter>
    )
 }
 
 const StyledFooter = styled.footer`
+   width: 100%;
    height: 100px;
-   margin-top: 50px;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   background-color: rgba(44, 46, 47);
+   color: #FFF;
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: rgba(44, 46, 47);
-   color: #FFF;
+
 `
 
 export default Footer;
