@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
    return (
@@ -8,40 +8,40 @@ const Menu = () => {
          <StyledMenuSpace>
          <ul>
             <li>
-               <NavLink 
+               <Link 
                   className="nav-link" 
                   activeClassName="nav-link-active"
                   exact
                   to="/">Home
-               </NavLink>
+               </Link>
             </li>
             <li>
-               <NavLink 
+               <Link 
                   className="nav-link" 
                   activeClassName="nav-link-active" 
                   to="/sobre">Sobre
-               </NavLink>
+               </Link>
             </li>
             <li>
-               <NavLink 
+               <Link 
                   className="nav-link" 
                   activeClassName="nav-link-active" 
                   to="/agendar">Agendar Consulta
-               </NavLink>
+               </Link>
             </li>
             <li>
-               <NavLink 
+               <Link 
                   className="nav-link" 
                   activeClassName="nav-link-active" 
                   to="/servicos">Serviços
-               </NavLink>
+               </Link>
             </li>
             <li>
-               <NavLink 
+               <Link 
                   className="nav-link" 
                   activeClassName="nav-link-active" 
                   to="/nutri/login">@Nutri
-               </NavLink>
+               </Link>
             </li>
          </ul>   
          </StyledMenuSpace>

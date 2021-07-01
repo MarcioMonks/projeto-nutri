@@ -14,7 +14,7 @@ const Footer = () => {
 const StyledFooter = styled.footer`
    width: 100%;
    height: 100px;
-   position: absolute;
+   position: fixed;
    bottom: 0;
    left: 0;
    background-color: rgba(44, 46, 47);
