@@ -39,7 +39,7 @@ export const Menu = styled.nav`
 
    .nav-link {
       margin: 5px;
-      display: block;
+      display: inline-block;
       padding: 15px;
       text-decoration: none;
       border-radius: 10px;
@@ -49,9 +49,7 @@ export const Menu = styled.nav`
    }
 
    .nav-link-active {
-      background-color: #ffbea5;
-      display: block;
-      
+      background: #ffbea5;
    }
 
    .nav-link:hover {

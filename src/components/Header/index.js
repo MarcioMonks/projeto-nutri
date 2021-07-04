@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
    HeaderSpace,
    HeaderContainer,
@@ -18,40 +18,40 @@ export default function header() {
             <Menu>
                <ul>
                   <li>
-                     <Link
+                     <NavLink
                         className="nav-link"
                         activeClassName="nav-link-active"
                         exact
                         to="/">Home
-                     </Link>
+                     </NavLink>
                   </li>
                   <li>
-                     <Link
+                     <NavLink
                         className="nav-link"
                         activeClassName="nav-link-active"
                         to="/sobre">Sobre
-                     </Link>
+                     </NavLink>
                   </li>
                   <li>
-                     <Link
+                     <NavLink
                         className="nav-link"
                         activeClassName="nav-link-active"
                         to="/agendar">Agendar Consulta
-                     </Link>
+                     </NavLink>
                   </li>
                   <li>
-                     <Link
+                     <NavLink
                         className="nav-link"
                         activeClassName="nav-link-active"
                         to="/servicos">Serviços
-                     </Link>
+                     </NavLink>
                   </li>
                   <li>
-                     <Link
+                     <NavLink
                         className="nav-link"
                         activeClassName="nav-link-active"
                         to="/nutri/login">@Nutri
-                     </Link>
+                     </NavLink>
                   </li>
                </ul>
             </Menu>
