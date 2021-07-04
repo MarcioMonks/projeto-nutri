@@ -14,18 +14,6 @@ import Login from './pages/Login';
 
 function App() {
   return (
-   //   <Router>
-   //       {/* <div className="App"> */}
-           
-   //          <Header/>
-   //          <Route exact path="/"> <Home/></Route>
-   //          <Route path="/sobre"><Sobre/></Route>
-   //          <Route path="/agendar"><Agenda/></Route>
-   //          <Route path="/servicos"><Servicos/></Route>
-   //          <Route path="/nutri/login"><Login/></Route>
-   //          <Footer/>
-   //       {/* </div> */}
-   //   </Router>
    <BrowserRouter>
       <Header/>
       <Switch>
