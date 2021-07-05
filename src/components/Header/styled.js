@@ -29,18 +29,22 @@ export const Menu = styled.nav`
    ul,
    li {
       list-style: none;
-      margin: 0;
-      padding: 0;
+      /* margin: 0;
+      padding: 0; */
    }
 
    ul {
+      margin: 0;
+      padding: 0;
       display: flex;
    }
 
    .nav-link {
       margin: 5px;
-      display: inline-block;
-      padding: 15px;
+      display: flex;
+      align-items: center;
+      border: 2px solid #FFFAFA;
+      padding: 5px 10px;
       text-decoration: none;
       border-radius: 10px;
       color: rgba(44, 46, 47, 0.835);
@@ -53,8 +57,9 @@ export const Menu = styled.nav`
    }
 
    .nav-link:hover {
-      padding-bottom: 10px;
-      border-bottom: 1px solid #ffbea5; 
+      background: #ffbea5;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(44, 46, 47, 0.835);
    }
 `;
 
