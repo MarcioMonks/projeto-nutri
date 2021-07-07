@@ -1,62 +1,38 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+
 import {
    HeaderSpace,
    HeaderContainer,
    Logo,
    LogoText,
-   Menu
+   TitleLink,
+   Nav,
+   NavLink
 } from './styled';
 
-export default function header() {
+const Header = () => {
    return (
-      <HeaderSpace>
-         <HeaderContainer>
-            <Logo>
-               <LogoText>Clínica Coma Saúde</LogoText>
-            </Logo>
-            <Menu>
-               <ul>
-                  <li>
-                     <NavLink
-                        className="nav-link"
-                        activeClassName="nav-link-active"
+      <>
+         <HeaderSpace>
+            <HeaderContainer>
+               <Nav>
+                  <Logo>
+                     <TitleLink
                         exact
-                        to="/">Home
-                     </NavLink>
-                  </li>
-                  <li>
-                     <NavLink
-                        className="nav-link"
-                        activeClassName="nav-link-active"
-                        to="/sobre">Sobre
-                     </NavLink>
-                  </li>
-                  <li>
-                     <NavLink
-                        className="nav-link"
-                        activeClassName="nav-link-active"
-                        to="/agendar">Agendar Consulta
-                     </NavLink>
-                  </li>
-                  <li>
-                     <NavLink
-                        className="nav-link"
-                        activeClassName="nav-link-active"
-                        to="/servicos">Serviços
-                     </NavLink>
-                  </li>
-                  <li>
-                     <NavLink
-                        className="nav-link"
-                        activeClassName="nav-link-active"
-                        to="/nutri/login">@Nutri
-                     </NavLink>
-                  </li>
-               </ul>
-            </Menu>
-         </HeaderContainer>
-      </HeaderSpace>
-
+                        to="/"><LogoText>Clínica de Nutrição</LogoText>
+                     </TitleLink>
+                  </Logo>
+               </Nav>
+               <Nav>
+                  <NavLink to="/sobre" activeStyle>Sobre</NavLink>
+                  <NavLink to="/agendar" activeStyle>Agendar Consulta</NavLink>
+                  <NavLink to="/servicos" activeStyle>Serviços</NavLink>
+                  <NavLink to="/nutri/login" activeStyle>@Nutri </NavLink>  
+               </Nav>
+            </HeaderContainer>
+         </HeaderSpace>
+      </>
    );
 }
+
+export default Header

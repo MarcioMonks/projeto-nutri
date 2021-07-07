@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
-export const Banner = styled.section`
+export const StyledBanner = styled.section`
    display: flex;
    justify-content: center;
    background-image: url('https://nutricamillabaffa.com.br/resources/img/nutricionista-camilla-baffa.jpg');
-   background-position: center;
+   background-position: bottom;
    background-size: cover;
-   height: 670px;
+   height: 600px;
 `;
 
 export const Container = styled.div`
    display: flex;
    justify-content: space-between;
-   width: 990px;
+   width: 1000px;
    flex-direction: column;
 
    .banner_headline {
@@ -24,7 +24,8 @@ export const Container = styled.div`
 
    .banner_headline h1 {
       color: rgba(44, 46, 47);
-      font-size: 70px;
+      text-transform: uppercase;
+      font-size: 65px;
       margin: 0;
       padding: 0;
       max-width: 350px;
@@ -42,6 +43,8 @@ export const Container = styled.div`
    .banner_options {
       height: 210px;
       display: flex;
+      justify-content: center;
+      
    }
 
    .banner1,
@@ -50,8 +53,9 @@ export const Container = styled.div`
       flex: 1;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      color: #FFF;
       padding: 20px;
+      text-align: justify;
+      color: white;
    }
 
    .banner1 {

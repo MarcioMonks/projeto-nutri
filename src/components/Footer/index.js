@@ -1,11 +1,14 @@
 import React from 'react';
 
-import { Footer } from './styled';
+import { StyledFooter } from './styled';
 
-export default function footer () {
+
+const Footer = () => {
    return (
-      <Footer>
+      <StyledFooter>
          <p>Márcio Monks - Copyright 2021</p>
-      </Footer>   
+      </StyledFooter>  
    )
 }
+
+export default Footer

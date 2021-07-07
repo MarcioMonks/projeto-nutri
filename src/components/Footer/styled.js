@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Footer = styled.footer`
+export const StyledFooter = styled.footer`
    width: 100%;
    height: 100px;
    position: fixed;
