@@ -1,26 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import { PageContainer, PageTitle } from '../components/MainComponents';
 
 
 const Agenda = () => {
    return (
-      <StyledDiv>
-      
-      <h1>Agende sua consulta aqui</h1>
-  
-      </StyledDiv>
+      <PageContainer>
+         <PageTitle>Agende sua consulta aqui</PageTitle>
+      </PageContainer>
    )
 }
 
-const StyledDiv = styled.div`
-   display: block;
-   width: 990px;
-   margin: auto;
-   position: relative;
-
-   p {
-      text-align: justify;
-   }
-`
 
 export default Agenda;

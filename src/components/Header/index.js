@@ -27,7 +27,7 @@ const Header = () => {
                   <NavLink to="/sobre" activeStyle>Sobre</NavLink>
                   <NavLink to="/agendar" activeStyle>Agendar Consulta</NavLink>
                   <NavLink to="/servicos" activeStyle>Serviços</NavLink>
-                  <NavLink to="/nutri/login" activeStyle>@Nutri </NavLink>  
+                  <NavLink to="/signin" activeStyle>@Nutri </NavLink>
                </Nav>
             </HeaderContainer>
          </HeaderSpace>

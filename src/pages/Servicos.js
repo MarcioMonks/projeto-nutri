@@ -1,10 +1,11 @@
 import React from 'react';
+import { PageContainer, PageTitle } from '../components/MainComponents';
 
 const Servicos = () => {
    return (
-      <>
-         <h1>Conheça nossos serviços</h1>
-      </>
+      <PageContainer>
+         <PageTitle>Conheça nossos serviços</PageTitle>
+      </PageContainer>
    )
 }
 

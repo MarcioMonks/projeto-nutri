@@ -10,7 +10,7 @@ const Banner = () => {
                <h1>Amor e Nutrição</h1>
                <h2>Meu objetivo é alcançar o seu objetivo através da reeducação alimentar.</h2>
             </div>
-            <div className="banner_options">
+            {/* <div className="banner_options">
                <div className="banner1">
                   <div className="banner_title">Planejamento</div>
                   <div className="banner_desc">Juntos elaboraremos um plano de dieta que melhor se ajuste ao seu perfil e objetivo.</div>
@@ -27,7 +27,7 @@ const Banner = () => {
                      <p>Tarde: das 14h às 19h</p>
                   </div>
                </div>
-            </div>
+            </div> */}
          </Container>
       </StyledBanner>
    )

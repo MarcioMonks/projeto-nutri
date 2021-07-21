@@ -4,9 +4,10 @@ export const StyledBanner = styled.section`
    display: flex;
    justify-content: center;
    background-image: url('https://nutricamillabaffa.com.br/resources/img/nutricionista-camilla-baffa.jpg');
+   /* background-image: url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGhlYWx0aHklMjBmb29kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'); */
    background-position: bottom;
    background-size: cover;
-   height: 600px;
+   height: 650px;
 `;
 
 export const Container = styled.div`
@@ -24,6 +25,7 @@ export const Container = styled.div`
 
    .banner_headline h1 {
       color: rgba(44, 46, 47);
+      
       text-transform: uppercase;
       font-size: 65px;
       margin: 0;
@@ -33,6 +35,7 @@ export const Container = styled.div`
 
    .banner_headline h2 {
       color: rgba(44, 46, 47);
+      
       font-size: 21px;
       margin: 0;
       padding: 0;
