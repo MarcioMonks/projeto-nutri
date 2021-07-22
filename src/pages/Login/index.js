@@ -1,8 +1,16 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { PageArea } from './styled';
 import { PageContainer, PageTitle } from '../../components/MainComponents';
 
 const Page = () => {
+
+   let history = useHistory();
+
+   const handleButton = () => {
+      history.replace('/nutri');
+   };
+
    return (
       <PageContainer>
          <PageTitle>Faça seu login</PageTitle>
@@ -29,7 +37,7 @@ const Page = () => {
                <label className="area">
                   <div className="area--title"></div>
                   <div className="area--input">
-                     <button>Fazer Login</button>
+                     <button onClick={handleButton}>Fazer Login</button>
                   </div>
                </label>  
             </form>
