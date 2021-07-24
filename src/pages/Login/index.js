@@ -40,8 +40,13 @@ const Page = () => {
                      <button onClick={handleButton}>Fazer Login</button>
                   </div>
                </label>  
+               <div>
+                  
+               </div>
             </form>
+            
          </PageArea>
+         
       </PageContainer>
    )
 }

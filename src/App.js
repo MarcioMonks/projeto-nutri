@@ -24,7 +24,7 @@ function App() {
                <Route path="/agendar"><Agenda /></Route>
                <Route path="/servicos"><Servicos /></Route>
                <Route path="/signin"><Login /></Route>
-               <Route path="/nutri"><Redirect to="/signin" /></Route>
+               <Route path="/nutri"><Nutri /></Route>
             </Switch>
             
             <Footer />

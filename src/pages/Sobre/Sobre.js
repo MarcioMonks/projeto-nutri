@@ -6,7 +6,7 @@ const Sobre = () => {
 
    return (
       <>
-
+         <PageContainer>
 
          
             {/*  */}
@@ -16,7 +16,7 @@ const Sobre = () => {
             {/* </PageContainer> */}
          
 
-         <PageContainer>
+         
             <div>
                <p>
                   Nossa clínica nasceu para Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor dignissim hendrerit. Ut nec ligula ullamcorper, maximus diam ac, elementum purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non eleifend magna. Suspendisse id tincidunt nunc. Nam efficitur aliquet odio, at volutpat quam. Ut scelerisque, tellus a sollicitudin tristique, neque nunc finibus turpis, at hendrerit orci augue a massa.
