@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { PageArea } from './styled';
 import { PageContainer, PageTitle } from '../../components/MainComponents';
+import { Formik } from 'formik';
 
 const Page = () => {
 
@@ -12,7 +13,8 @@ const Page = () => {
    };
 
    return (
-      <PageContainer>
+      <Formik>
+         <PageContainer>
          <PageTitle>Faça seu login</PageTitle>
          <PageArea>
             <form>
@@ -48,6 +50,8 @@ const Page = () => {
          </PageArea>
          
       </PageContainer>
+      </Formik>
+      
    )
 }
 
