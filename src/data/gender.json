@@ -1,0 +1,13 @@
+{
+   
+   "M": "Masculino",
+   "F": "Feminino", 
+   "HT": "Homem transgênero",
+   "MT": "Mulher transgênero",
+   "HTr": "Homem transexual",
+   "Mtr": "Mulher transexual",
+   "C": "Cisgênero",
+   "N": "Não sei responder",
+   "P": "Prefiro não responder",
+   "O": "outros"
+}
