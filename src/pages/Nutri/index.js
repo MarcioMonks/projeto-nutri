@@ -1,11 +1,14 @@
 import React from 'react';
-import { PageArea } from './styled';
+import Modal from '../../components/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 import { Formik, Form, prepareDataForValidation } from 'formik';
 import * as Yup from 'yup';
 import {
+   Button,
+   ButtonBase,
    Container,
    Grid,
+   IconButton,
    Typography
 } from '@material-ui/core';
 import Textfield from '../../components/FormsUI/Textfield/index';
@@ -14,6 +17,7 @@ import DateTimePicker from '../../components/FormsUI/DateTime';
 import states from '../../data/states.json';
 import gender from '../../data/gender.json';
 import ethnicities from '../../data/ethnicities.json';
+import occupations from '../../data/occupations.json';
 
 const useStyles = makeStyles((theme) => ({
    formWrapper: {
@@ -23,49 +27,51 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const INITIAL_FORM_STATE = {
-   nome: '',
+   name: '',
    birthDate: '',
    gender: '',
    ethnicity: '',
-   rg: '',
    cpf: '',
+   rg: '',
+   email: '',  
    phone: '',
    address: '',
    district: '',
    city: '',
    state: '',
-   email: '',   
+   occupation: '',
 };
 
 const FORM_VALIDATION = Yup.object().shape({
-   nome: Yup.string()
-      .required('Campo obrigatório'),
+   name: Yup.string()
+      .required('*campo obrigatório'),
    birthDate: Yup.date()
-      .required('Campo obrigatório'),
+      .required('*campo obrigatório'),
    gender: Yup.string()
-      .required('Campo obrigatório'),
+      .required('*campo obrigatório'),
    ethnicity: Yup.string()
-      .required('Campo obrigatório'),
+      .required('*campo obrigatório'),
    cpf: Yup.number()
-      .required('Campo obrigatório')
+      .required('*campo obrigatório')
       .integer()
       .typeError('Por favor, informe um número de CPF válido'),
    rg: Yup.number()
       .integer()
       .typeError('Por favor, informe um número de RG válido'),
+   email: Yup.string()
+      .email('Email inválido'),
    phone: Yup.number()
       .integer()
       .typeError('Por favor, informe um número de telefone válido'),
    address: Yup.string()
-      .required('Campo obrigatório'),
+      .required('*campo obrigatório'),
    district: Yup.string()
-      .required('Campo obrigatório'),
+      .required('*campo obrigatório'),
    city: Yup.string()
-      .required('Campo obrigatório'),
+      .required('*campo obrigatório'),
    state: Yup.string()
-      .required('Campo obrigatório'),
-   email: Yup.string()
-      .email('Email inválido'),
+      .required('*campo obrigatório'),
+   occupation: Yup.string()   
 });
 
 const Nutri = () => {
@@ -103,7 +109,7 @@ const Nutri = () => {
 
                            <Grid item xs={12}>
                               <Textfield
-                                 name="nome"
+                                 name="name"
                                  label="Nome"
                               />
                            </Grid>
@@ -147,8 +153,23 @@ const Nutri = () => {
 
                            <Grid item xs={4}>
                               <Textfield
+                                 name="email"
+                                 label="E-mail"
+                              />
+                           </Grid>
+
+                           <Grid item xs={4}>
+                              <Textfield
                                  name="phone"
                                  label="Telefone"
+                              />
+                           </Grid>
+
+                           <Grid item xs={4}>
+                              <Select
+                                 name="occupation"
+                                 label="Profissão"
+                                 options={occupations}
                               />
                            </Grid>
 
@@ -185,28 +206,20 @@ const Nutri = () => {
                                  label="Estado"
                                  options={states}
                               />
-                           </Grid>
-
-                           <Grid item xs={12}>
-                              <Typography>
-                                 E-mail
-                              </Typography>
-                           </Grid>
-
-                           <Grid item xs={12}>
-                              <Typography>
-                                 Telefone
-                              </Typography>
-                           </Grid>
-
+                           </Grid>  
                         </Grid>
                      </Form>
                   </Formik>
 
                </div>
+               <Button>Cadastrar paciente</Button>
             </Container>
          </Grid>
+         
+         
       </Grid>
+
+      
    )
 }
 
