@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from '../../components/Modal';
 import { makeStyles } from '@material-ui/core/styles';
-import { Formik, Form, prepareDataForValidation } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import {
    Button,
@@ -22,7 +22,7 @@ import occupations from '../../data/occupations.json';
 const useStyles = makeStyles((theme) => ({
    formWrapper: {
       marginTop: theme.spacing(5),
-      marginBottom: theme.spacing(8),
+      marginBottom: theme.spacing(5),
    },
 }));
 
@@ -76,149 +76,163 @@ const FORM_VALIDATION = Yup.object().shape({
 
 const Nutri = () => {
 
+   const [ modalVisible, setModalVisible ] = useState(false);
+
+   const handleButtonClick = () => {
+      setModalVisible(true);
+   }
+
    const classes = useStyles();
 
    return (
-      <Grid container>
-         <Grid item xs={12}>
-            <Container maxWidth="md">
-               <div className={classes.formWrapper}>
+      <>
+      <Button variant="contained" color="primary" onClick={handleButtonClick}>Cadastrar paciente</Button>
+      <Button variant="contained" color="secondary">Iniciar Consulta</Button>
 
-                  <Formik
-                     initialValues={{
-                        ...INITIAL_FORM_STATE
-                     }}
-                     validationSchema={FORM_VALIDATION}
-                     onSubmit={values => {
-                        console.log(values);
-                     }}
-                  >
-                     <Form>
-                        <Grid container spacing={2}>
-                           <Grid item xs={12}>
-                              <Typography>
-                                 <h2>Cadastro de Paciente</h2>
-                              </Typography>
+      <Modal visible={modalVisible} setVisible={setModalVisible}>
+         <Grid container>
+            <Grid item xs={12}>
+               <Container maxWidth="md">
+                  <div className={classes.formWrapper}>
+
+                     <Formik
+                        initialValues={{
+                           ...INITIAL_FORM_STATE
+                        }}
+                        validationSchema={FORM_VALIDATION}
+                        onSubmit={values => {
+                           console.log(values);
+                        }}
+                     >
+                        <Form>
+                           <Grid container spacing={2}>
+                              <Grid item xs={12}>
+                                 <Typography>
+                                    <h2>Cadastro de Paciente</h2>
+                                 </Typography>
+                              </Grid>
+
+                              <Grid item xs={12}>
+                                 <Typography>
+                                    Dados Pessoais:
+                                 </Typography>
+                              </Grid>
+
+                              <Grid item xs={12}>
+                                 <Textfield
+                                    name="name"
+                                    label="Nome"
+                                 />
+                              </Grid>
+
+                              <Grid item xs={4}>
+                                 <DateTimePicker
+                                    name="birthDate"
+                                    label="Data de nascimento"
+                                 />
+                              </Grid>
+
+                              <Grid item xs={4}>
+                                 <Select
+                                    name="ethnicity"
+                                    label="Raça/Cor/Etnia"
+                                    options={ethnicities}
+                                 />
+                              </Grid>
+
+                              <Grid item xs={4}>
+                                 <Select
+                                    name="gender"
+                                    label="Gênero"
+                                    options={gender}
+                                 />
+                              </Grid>
+
+                              <Grid item xs={4}>
+                                 <Textfield
+                                    name="cpf"
+                                    label="CPF"
+                                 />
+                              </Grid>
+
+                              <Grid item xs={4}>
+                                 <Textfield
+                                    name="rg"
+                                    label="RG"
+                                 />
+                              </Grid>
+
+                              <Grid item xs={4}>
+                                 <Textfield
+                                    name="email"
+                                    label="E-mail"
+                                 />
+                              </Grid>
+
+                              <Grid item xs={4}>
+                                 <Textfield
+                                    name="phone"
+                                    label="Telefone"
+                                 />
+                              </Grid>
+
+                              <Grid item xs={4}>
+                                 <Select
+                                    name="occupation"
+                                    label="Profissão"
+                                    options={occupations}
+                                 />
+                              </Grid>
+
+                              <Grid item xs={12}>
+                                 <Typography>
+                                    Endereço:
+                                 </Typography>
+                              </Grid>
+
+                              <Grid item xs={4}>
+                                 <Textfield
+                                    name="address"
+                                    label="Logradouro"
+                                 />
+                              </Grid>
+
+                              <Grid item xs={3}>
+                                 <Textfield
+                                    name="district"
+                                    label="Bairro"
+                                 />
+                              </Grid>
+
+                              <Grid item xs={3}>
+                                 <Textfield
+                                    name="city"
+                                    label="Cidade"
+                                 />
+                              </Grid>
+
+                              <Grid item xs={2}>
+                                 <Select
+                                    name="state"
+                                    label="Estado"
+                                    options={states}
+                                 />
+                              </Grid> 
+                              <Grid item xs={12}>
+                              <Button variant="contained" color="primary">Salvar</Button>
+                              </Grid> 
                            </Grid>
-
-                           <Grid item xs={12}>
-                              <Typography>
-                                 Dados Pessoais:
-                              </Typography>
-                           </Grid>
-
-                           <Grid item xs={12}>
-                              <Textfield
-                                 name="name"
-                                 label="Nome"
-                              />
-                           </Grid>
-
-                           <Grid item xs={4}>
-                              <DateTimePicker
-                                 name="birthDate"
-                                 label="Data de nascimento"
-                              />
-                           </Grid>
-
-                           <Grid item xs={4}>
-                              <Select
-                                 name="ethnicity"
-                                 label="Raça/Cor/Etnia"
-                                 options={ethnicities}
-                              />
-                           </Grid>
-
-                           <Grid item xs={4}>
-                              <Select
-                                 name="gender"
-                                 label="Gênero"
-                                 options={gender}
-                              />
-                           </Grid>
-
-                           <Grid item xs={4}>
-                              <Textfield
-                                 name="cpf"
-                                 label="CPF"
-                              />
-                           </Grid>
-
-                           <Grid item xs={4}>
-                              <Textfield
-                                 name="rg"
-                                 label="RG"
-                              />
-                           </Grid>
-
-                           <Grid item xs={4}>
-                              <Textfield
-                                 name="email"
-                                 label="E-mail"
-                              />
-                           </Grid>
-
-                           <Grid item xs={4}>
-                              <Textfield
-                                 name="phone"
-                                 label="Telefone"
-                              />
-                           </Grid>
-
-                           <Grid item xs={4}>
-                              <Select
-                                 name="occupation"
-                                 label="Profissão"
-                                 options={occupations}
-                              />
-                           </Grid>
-
-                           <Grid item xs={12}>
-                              <Typography>
-                                 Endereço:
-                              </Typography>
-                           </Grid>
-
-                           <Grid item xs={4}>
-                              <Textfield
-                                 name="address"
-                                 label="Logradouro"
-                              />
-                           </Grid>
-
-                           <Grid item xs={3}>
-                              <Textfield
-                                 name="district"
-                                 label="Bairro"
-                              />
-                           </Grid>
-
-                           <Grid item xs={3}>
-                              <Textfield
-                                 name="city"
-                                 label="Cidade"
-                              />
-                           </Grid>
-
-                           <Grid item xs={2}>
-                              <Select
-                                 name="state"
-                                 label="Estado"
-                                 options={states}
-                              />
-                           </Grid>  
-                        </Grid>
-                     </Form>
-                  </Formik>
-
-               </div>
-               <Button>Cadastrar paciente</Button>
-            </Container>
+                        </Form>
+                     </Formik>
+                     
+                  </div>
+                  
+                  
+               </Container>
+            </Grid>   
          </Grid>
-         
-         
-      </Grid>
-
+      </Modal>
+      </>
       
    )
 }
