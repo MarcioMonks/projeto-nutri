@@ -11,6 +11,7 @@ import Agenda from './pages/Agenda';
 import Servicos from './pages/Servicos';
 import Login from './pages/Login/';
 import Nutri from "./pages/Nutri";
+import QPC from './pages/QPC';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                <Route path="/servicos"><Servicos /></Route>
                <Route path="/signin"><Login /></Route>
                <Route path="/nutri"><Nutri /></Route>
+               <Route exact path="/questionario-pre-consulta"><QPC /></Route>
             </Switch>
             
             <Footer />

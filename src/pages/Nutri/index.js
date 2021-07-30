@@ -5,10 +5,8 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import {
    Button,
-   ButtonBase,
    Container,
    Grid,
-   IconButton,
    Typography
 } from '@material-ui/core';
 import Textfield from '../../components/FormsUI/Textfield/index';
@@ -18,6 +16,7 @@ import states from '../../data/states.json';
 import gender from '../../data/gender.json';
 import ethnicities from '../../data/ethnicities.json';
 import occupations from '../../data/occupations.json';
+import { PageContainer } from '../../components/MainComponents';
 
 const useStyles = makeStyles((theme) => ({
    formWrapper: {
@@ -86,8 +85,11 @@ const Nutri = () => {
 
    return (
       <>
-      <Button variant="contained" color="primary" onClick={handleButtonClick}>Cadastrar paciente</Button>
-      <Button variant="contained" color="secondary">Iniciar Consulta</Button>
+      <PageContainer>
+         <Button variant="contained" color="primary" onClick={handleButtonClick}>Cadastrar paciente</Button>
+         <Button variant="contained" color="secondary">Iniciar Consulta</Button>
+      </PageContainer>
+      
 
       <Modal visible={modalVisible} setVisible={setModalVisible}>
          <Grid container>
