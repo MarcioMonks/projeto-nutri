@@ -32,7 +32,7 @@ export const CardTitle = styled.div`
 `;
 
 export const CardContent = styled.div`
-   background-image: url("https://www.enzazaden.com//us/-/media/Images/enza-zaden/list-images-640x480/01_products-services/02-trends-and-inspiration/2020/li_2020_healthy-food-heart.jpg");
+   
    background-position: center;
    background-size: cover;
    flex: 1;
