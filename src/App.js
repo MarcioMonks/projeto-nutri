@@ -24,7 +24,7 @@ function App() {
                <Route path="/sobre"><Sobre /></Route>
                <Route path="/agendar"><Agenda /></Route>
                <Route path="/servicos"><Servicos /></Route>
-               <Route path="/signin"><Login /></Route>
+               <Route exact path="/signin"><Login /></Route>
                <Route path="/nutri"><Nutri /></Route>
                <Route exact path="/questionario-pre-consulta"><QPC /></Route>
             </Switch>

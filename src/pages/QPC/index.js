@@ -25,8 +25,6 @@ const INITIAL_FORM_STATE = {
    dataConsulta: '',
    objConsulta: '',
    histConsulta: '',
-   horaAcordar: '',
-   horaDormir: '',
    qualidadeSono: '',
    acordaANoite: '',  
    insonia: '',
@@ -54,10 +52,6 @@ const FORM_VALIDATION = Yup.object().shape({
       .required('*campo obrigatório'),
    atividadeFisica: Yup.string()
       .required('*campo obrigatório')
-   // cpf: Yup.number()
-   //    .required('*campo obrigatório')
-   //    .integer()
-   //    .typeError('Por favor, informe um número de CPF válido'),
    
 });
 
