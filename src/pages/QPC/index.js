@@ -31,6 +31,11 @@ const INITIAL_FORM_STATE = {
    rotina: '',
    lazer: '',
    atividadeFisica: '',
+   doenca: '',
+   medicamentos: '',
+   fumante: '',
+   alcool: '',
+   dificuldadesAlimentacao: ''
 };
 
 const FORM_VALIDATION = Yup.object().shape({
@@ -51,8 +56,17 @@ const FORM_VALIDATION = Yup.object().shape({
    lazer: Yup.string()
       .required('*campo obrigatório'),
    atividadeFisica: Yup.string()
+      .required('*campo obrigatório'),
+   doenca: Yup.string()
+      .required('*campo obrigatório'),
+   medicamentos: Yup.string()
+      .required('*campo obrigatório'),
+   fumante: Yup.string()
+      .required('*campo obrigatório'),
+   alcool: Yup.string()
+      .required('*campo obrigatório'),
+   dificuldadesAlimentacao: Yup.string()
       .required('*campo obrigatório')
-   
 });
 
 const QPC = () => {
@@ -185,7 +199,38 @@ const QPC = () => {
                               <Grid item xs={12}>
                                  <Textfield
                                     name="atividadeFisica"
-                                    label="Você é pratica atividades físicas? Se sim, quais?"
+                                    label="Você é pratica atividades físicas? Se sim, quais e com que frequência?"
+                                    multiline={true}
+                                    rows={4}
+                                 />   
+                              </Grid>
+                              <Grid item xs={12}>
+                                 <Typography>
+                                    <h3>Saúde</h3>
+                                 </Typography>
+                              </Grid>
+
+                              <Grid item xs={6}>
+                                 <Textfield
+                                    name="doenca"
+                                    label="Tem ou já teve alguma doença?"
+                                 />   
+                              </Grid>
+                              <Grid item xs={6}>
+                                 <Textfield
+                                    name="medicamentos"
+                                    label="Toma algum medicamento de uso contínuo?"
+                                 />   
+                              </Grid>
+                              <Grid item xs={12}>
+                                 <Typography>
+                                    <h3>Pessoal</h3>
+                                 </Typography>
+                              </Grid>
+                              <Grid item xs={12}>
+                                 <Textfield
+                                    name="dificuldadesAlimentacao"
+                                    label="Quais são as suas principais dificuldades com relação à alimentação?"
                                     multiline={true}
                                     rows={4}
                                  />   
